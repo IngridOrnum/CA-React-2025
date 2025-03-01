@@ -1,10 +1,38 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import {StrictMode} from 'react'
+import {createRoot} from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {App} from './App.jsx'
+import {SingleProduct} from "./routes/SingleProduct.jsx";
+import {Checkout} from "./routes/Checkout.jsx";
+import {CheckoutSuccess} from "./routes/CheckoutSuccess.jsx";
+import {About} from "./routes/About.jsx";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App/>
+    },
+    {
+        path: "/single-product/:id",
+        element: <SingleProduct/>
+    },
+    // {
+    //     path: "/checkout",
+    //     element: <Checkout/>
+    // },
+    // {
+    //     path: "/checkout-success",
+    //     element: <CheckoutSuccess/>
+    // },
+    // {
+    //     path: "/about",
+    //     element: <About/>
+    // },
+])
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        <RouterProvider router={router}/>
+    </StrictMode>,
 )
