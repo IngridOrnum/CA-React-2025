@@ -22,10 +22,10 @@ const router = createBrowserRouter([
                 path: "/single-product/:id",
                 element: <SingleProduct/>
             },
-            // {
-            //     path: "/checkout",
-            //     element: <Checkout/>
-            // },
+            {
+                path: "/checkout",
+                element: <Checkout/>
+            },
             // {
             //     path: "/checkout-success",
             //     element: <CheckoutSuccess/>

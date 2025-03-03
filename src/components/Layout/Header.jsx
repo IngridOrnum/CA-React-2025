@@ -14,8 +14,10 @@ export function Header () {
             <div className={"flex items-center gap-6"}>
                 <img className={"h-6 w-6 cursor-pointer"}
                      src={"../../public/assets/search-interface-symbol.png"} alt={"Search Symbol"}/>
-                <img className={"h-8 w-8 cursor-pointer"}
-                     src={"../../public/assets/shopping-bag.png"} alt={"Shopping Bag"}/>
+                <Link to={"/checkout"}>
+                    <img className={"h-8 w-8 cursor-pointer"}
+                         src={"../../public/assets/shopping-bag.png"} alt={"Shopping Bag"}/>
+                </Link>
             </div>
         </header>
         </>
