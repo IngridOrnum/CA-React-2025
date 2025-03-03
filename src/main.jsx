@@ -7,28 +7,36 @@ import {SingleProduct} from "./routes/SingleProduct.jsx";
 import {Checkout} from "./routes/Checkout.jsx";
 import {CheckoutSuccess} from "./routes/CheckoutSuccess.jsx";
 import {About} from "./routes/About.jsx";
+import {Layout} from "./components/Layout/index.jsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App/>
+        path: "",
+        element: <Layout/>,
+        children: [
+            {
+                path: "/",
+                element: <App/>
+            },
+            {
+                path: "/single-product/:id",
+                element: <SingleProduct/>
+            },
+            // {
+            //     path: "/checkout",
+            //     element: <Checkout/>
+            // },
+            // {
+            //     path: "/checkout-success",
+            //     element: <CheckoutSuccess/>
+            // },
+            {
+                path: "/about",
+                element: <About/>
+            },
+        ]
     },
-    {
-        path: "/single-product/:id",
-        element: <SingleProduct/>
-    },
-    // {
-    //     path: "/checkout",
-    //     element: <Checkout/>
-    // },
-    // {
-    //     path: "/checkout-success",
-    //     element: <CheckoutSuccess/>
-    // },
-    // {
-    //     path: "/about",
-    //     element: <About/>
-    // },
+
 ])
 
 createRoot(document.getElementById('root')).render(

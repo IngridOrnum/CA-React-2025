@@ -20,21 +20,23 @@ export function App() {
 
     return (
         <>
-            <h1>Products</h1>
+            <h1 className={"font-bold text-2xl flex justify-center mb-10"}>Products</h1>
             <div className={"flex flex-wrap gap-4 justify-center"}>
                 {products.map((product) => {
                     return (
-                        <Link
-                            to={"/single-product/" + product.id}
-                            key={product.id}>
-                            <div className={"border border-black w-fit p-4 cursor-pointer"}>
+                        <>
+                            <div className={"border border-black w-fit p-4"}>
                                 <img className={"w-60 h-60 object-cover"} src={product.image.url}
                                      alt={product.image.alt}/>
                                 <p className={"font-bold"}>{product.title}</p>
                                 <p>{product.price}</p>
                                 <p>{product.discountedPrice}</p>
+                                <Link to={"/single-product/" + product.id}key={product.id}>
+                                    <button className={"cursor-pointer border border-black p-1"}>View Product</button>
+                                </Link>
                             </div>
-                        </Link>
+                        </>
+
                     )
                 })}
             </div>
