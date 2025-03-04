@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const url = "https://v2.api.noroff.dev/online-shop/";
 
@@ -6,9 +7,13 @@ export function Search() {
     const [isVisible, setIsVisible] = useState(false);
     const [items, setItems] = useState([]);
     const [query, setQuery] = useState("");
+    const navigate = useNavigate();
 
     const filteredItems = items.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
 
+    const handleItemClick = (id) => {
+        navigate(`/single-product/${id}`);
+    }
 
     useEffect(() => {
         async function getProducts() {
@@ -39,11 +44,23 @@ export function Search() {
                         X
                     </button>
                     <label htmlFor="search"></label>
-                    <input value={query} type={"search"} id={"search"} className={"border p-1 bg-white mt-10"}
-                           onChange={e => setQuery(e.target.value)}/>
-                    {filteredItems.map(item => (
-                        <div key={item.id}>{item.title}</div>
-                    ))}
+                    <input
+                        value={query}
+                        type={"search"}
+                        id={"search"}
+                        className={"border p-1 bg-white mt-10"}
+                        onChange={e => setQuery(e.target.value)}
+                        placeholder={"Search products.."}
+                    />
+                    {query && filteredItems.length > 0 && (
+                        <div>
+                            {filteredItems.map(item => (
+                                <div key={item.id} onClick={() => handleItemClick(item.id)} className={"cursor-pointer"}>
+                                    {item.title}
+                                </div>
+                            ))}
+                        </div>
+                    )}
                     <button className={"border p-2 cursor-pointer"}>Show All Results</button>
                 </div>
             }

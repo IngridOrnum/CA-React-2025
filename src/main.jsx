@@ -6,7 +6,7 @@ import {App} from './App.jsx'
 import {SingleProduct} from "./routes/SingleProduct.jsx";
 import {Checkout} from "./routes/Checkout.jsx";
 import {CheckoutSuccess} from "./routes/CheckoutSuccess.jsx";
-import {About} from "./routes/About.jsx";
+import {Contact} from "./routes/Contact.jsx";
 import {Layout} from "./components/Layout/index.jsx";
 import {CartProvider} from "./context/Cart.jsx";
 
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
                 element: <CheckoutSuccess/>
             },
             {
-                path: "/about",
-                element: <About/>
+                path: "/contact",
+                element: <Contact/>
             },
         ]
     },
