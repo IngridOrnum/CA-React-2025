@@ -8,6 +8,7 @@ import {Checkout} from "./routes/Checkout.jsx";
 import {CheckoutSuccess} from "./routes/CheckoutSuccess.jsx";
 import {About} from "./routes/About.jsx";
 import {Layout} from "./components/Layout/index.jsx";
+import {CartProvider} from "./context/Cart.jsx";
 
 const router = createBrowserRouter([
     {
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
                 path: "/checkout",
                 element: <Checkout/>
             },
-            // {
-            //     path: "/checkout-success",
-            //     element: <CheckoutSuccess/>
-            // },
+            {
+                path: "/checkout-success",
+                element: <CheckoutSuccess/>
+            },
             {
                 path: "/about",
                 element: <About/>
@@ -41,6 +42,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <RouterProvider router={router}/>
+        <CartProvider>
+            <RouterProvider router={router}/>
+        </CartProvider>
     </StrictMode>,
 )
