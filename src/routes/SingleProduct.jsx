@@ -1,9 +1,11 @@
 import {useParams} from "react-router-dom";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
+import {CartContext} from "../context/Cart.jsx";
 
 export function SingleProduct() {
 
     const {id} = useParams();
+    const {addToCart} = useContext(CartContext);
 
     const [product, setProduct] = useState(false);
 
@@ -17,14 +19,17 @@ export function SingleProduct() {
         }
 
         getSingleProduct();
-    }, []);
+    }, [id]);
     return (
         <>
-            <h1>Single Product</h1>
             {product ? (
                 <div>
-                    <h2>{product.title}</h2>
-                    <img src={product.image.url} alt={product.image.url}/>
+                    <h1 className={"font-bold text-2xl"}>{product.title}</h1>
+                    <img className={"h-96 w-auto"} src={product.image.url} alt={product.image.url}/>
+                    <p>Price: {product.price}</p>
+                    <p>Sale: {product.discountedPrice}</p>
+                    <button className={"border p-1 cursor-pointer"}
+                    onClick={() => addToCart ({...product, price: product.discountedPrice})}>Add to cart</button>
                 </div>
             ) : (
                 <p>Loading...</p>
