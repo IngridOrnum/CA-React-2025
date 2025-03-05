@@ -13,6 +13,7 @@ export function Search() {
 
     const handleItemClick = (id) => {
         navigate(`/single-product/${id}`);
+        setIsVisible(false);
     }
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export function Search() {
     return (
         <>
             <img className={"h-6 w-6 cursor-pointer"}
-                 src="../../../public/assets/search-interface-symbol.png" alt={"Search Symbol"}
+                 src="/assets/search-interface-symbol.png" alt={"Search Symbol"}
                  onClick={() => setIsVisible(!isVisible)}
             />
             {isVisible &&

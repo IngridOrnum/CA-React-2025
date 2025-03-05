@@ -1,6 +1,7 @@
 import './index.css'
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
+import {StarRating} from "./components/Rating/StarRating.jsx";
 
 const url = "https://v2.api.noroff.dev/online-shop/";
 
@@ -31,7 +32,11 @@ export function App() {
                                 <p className={"font-bold"}>{product.title}</p>
                                 <p>{product.price}</p>
                                 <p>{product.discountedPrice}</p>
-                                <Link to={"/single-product/" + product.id}key={product.id}>
+                                <div className={"flex gap-4"}>
+                                    <StarRating rating={product.rating}/>
+                                    <p>{product.rating}</p>
+                                </div>
+                                <Link to={"/single-product/" + product.id} key={product.id}>
                                     <button className={"cursor-pointer border border-black p-1"}>View Product</button>
                                 </Link>
                             </div>
