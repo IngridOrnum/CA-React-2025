@@ -2,24 +2,20 @@
     color: gold;
     position: relative;
     display: inline-block;
-}
-
-.halfStar::before, .halfStar::after {
-    content: '★';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    overflow: hidden;
-}
-
-.halfStar::before {
-    color: gold;
+    font-size: 24px;
 }
 
 .halfStar::after {
+    content: '★';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 50%;
+    overflow: hidden;
     color: #ccc;
-    left: 50%;
+    z-index: 1;
 }
 
 .emptyStar {
