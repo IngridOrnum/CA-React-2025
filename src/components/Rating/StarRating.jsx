@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './StarRating.module.css'
 
 export function StarRating({rating}) {
     const fullStar = Math.floor(rating);
@@ -8,13 +9,13 @@ export function StarRating({rating}) {
     return (
         <div className={"StarRating"}>
             {Array(fullStar).fill().map((_, index) => (
-                <span key={index} className={"star"}>★</span>
+                <span key={index} className={`${styles.star}`}>★</span>
             ))}
             {halfStar === 1 && (
-                <span key={"half-star"} className={"star half-star"}>★</span>
+                <span key={"half-star"} className={`${styles.star} ${styles.halfStar}`}>★</span>
             )}
             {Array(emptyStar).fill().map((_, index) => (
-                <span key={index + fullStar + halfStar} className={"star empty-star"}>★</span>
+                <span key={index + fullStar + halfStar} className={`${styles.star} ${styles.emptyStar}`}>★</span>
             ))}
         </div>
     )

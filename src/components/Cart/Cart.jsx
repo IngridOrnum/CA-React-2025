@@ -11,7 +11,7 @@ export function Cart () {
             <Link to={"/checkout"}
                   className={"h-10 w-10 relative rounded full flex justify-center items center"}>
                 <img className={"h-8 w-8 cursor-pointer"}
-                     src="../../../public/assets/shopping-bag.png" alt={"Shopping Bag"}/>
+                     src="/assets/shopping-bag.png" alt={"Shopping Bag"}/>
                 <span
                     className={"absolute text-white top-2/3 right-1/2 bg-red-500 text-sm h-5 w-5 rounded full flex justify-center items-center"}>
                     {cartItemCount}

@@ -15,7 +15,6 @@ export function App() {
             console.log(data);
             setProducts(data.data);
         }
-
         getProducts();
     }, []);
 
@@ -26,7 +25,7 @@ export function App() {
                 {products.map((product) => {
                     return (
                         <>
-                            <div className={"border border-black w-fit p-4"}>
+                            <div key={product.id} className={"border border-black w-fit p-4"}>
                                 <img className={"w-60 h-60 object-cover"} src={product.image.url}
                                      alt={product.image.alt}/>
                                 <p className={"font-bold"}>{product.title}</p>
@@ -36,7 +35,7 @@ export function App() {
                                     <StarRating rating={product.rating}/>
                                     <p>{product.rating}</p>
                                 </div>
-                                <Link to={"/single-product/" + product.id} key={product.id}>
+                                <Link to={`/single-product/${product.id}`}>
                                     <button className={"cursor-pointer border border-black p-1"}>View Product</button>
                                 </Link>
                             </div>

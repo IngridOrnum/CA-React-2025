@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
+
 const url = "https://v2.api.noroff.dev/online-shop/";
 
 export function Search() {
