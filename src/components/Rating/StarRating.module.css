@@ -1,8 +1,7 @@
-/* StarRating.module.css */
 .star {
-    color: gold; /* Gold color for full stars */
-    position: relative; /* Ensure positioning context */
-    display: inline-block; /* Ensure the star behaves as a block with line dimensions */
+    color: gold;
+    position: relative;
+    display: inline-block;
 }
 
 .halfStar::before, .halfStar::after {
@@ -15,14 +14,14 @@
 }
 
 .halfStar::before {
-    color: gold; /* Gold color for the filled part of the star */
+    color: gold;
 }
 
 .halfStar::after {
-    color: #ccc; /* Gray color for the empty part of the star */
-    left: 50%; /* Move it to cover the right half */
+    color: #ccc;
+    left: 50%;
 }
 
 .emptyStar {
-    color: #ccc; /* Gray color for empty stars */
+    color: #ccc;
 }

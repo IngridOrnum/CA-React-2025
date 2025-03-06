@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import {useState, useEffect, useContext} from "react";
 import {CartContext} from "../context/Cart.jsx";
 import {StarRating} from "../components/Rating/StarRating.jsx";
+import PriceDisplay from "../components/PriceDisplay/PriceDisplay.jsx";
 
 export function SingleProduct() {
 
@@ -27,8 +28,7 @@ export function SingleProduct() {
                 <div>
                     <h1 className={"font-bold text-2xl"}>{product.title}</h1>
                     <img className={"h-96 w-auto"} src={product.image.url} alt={product.image.url}/>
-                    <p>Price: {product.price}</p>
-                    <p>Sale: {product.discountedPrice}</p>
+                    <PriceDisplay price={product.price} discountPrice={product.discountedPrice} />
                     <div className={"flex gap-4"}>
                         <StarRating rating={product.rating}/>
                         <p>{product.rating}</p>

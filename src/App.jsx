@@ -2,6 +2,7 @@ import './index.css'
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {StarRating} from "./components/Rating/StarRating.jsx";
+import PriceDisplay from "./components/PriceDisplay/PriceDisplay.jsx";
 
 const url = "https://v2.api.noroff.dev/online-shop/";
 
@@ -29,8 +30,7 @@ export function App() {
                                 <img className={"w-60 h-60 object-cover"} src={product.image.url}
                                      alt={product.image.alt}/>
                                 <p className={"font-bold"}>{product.title}</p>
-                                <p>{product.price}</p>
-                                <p>{product.discountedPrice}</p>
+                                <PriceDisplay price={product.price} discountPrice={product.discountedPrice} />
                                 <div className={"flex gap-4"}>
                                     <StarRating rating={product.rating}/>
                                     <p>{product.rating}</p>

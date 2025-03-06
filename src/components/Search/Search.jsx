@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-
 const url = "https://v2.api.noroff.dev/online-shop/";
 
 export function Search() {
@@ -53,6 +52,7 @@ export function Search() {
                         className={"border p-1 bg-white mt-10"}
                         onChange={e => setQuery(e.target.value)}
                         placeholder={"Search products.."}
+                        autoComplete={"off"}
                     />
                     {query && filteredItems.length > 0 && (
                         <div>
