@@ -13,6 +13,7 @@ export function Search() {
 
     const handleItemClick = (id) => {
         navigate(`/single-product/${id}`);
+        setIsVisible(false);
     }
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export function Search() {
     return (
         <>
             <img className={"h-6 w-6 cursor-pointer"}
-                 src="../../../public/assets/search-interface-symbol.png" alt={"Search Symbol"}
+                 src="/assets/search-interface-symbol.png" alt={"Search Symbol"}
                  onClick={() => setIsVisible(!isVisible)}
             />
             {isVisible &&
@@ -51,6 +52,7 @@ export function Search() {
                         className={"border p-1 bg-white mt-10"}
                         onChange={e => setQuery(e.target.value)}
                         placeholder={"Search products.."}
+                        autoComplete={"off"}
                     />
                     {query && filteredItems.length > 0 && (
                         <div>

@@ -1,0 +1,23 @@
+.star {
+    color: gold;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.halfStar::after {
+    content: '★';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 50%;
+    overflow: hidden;
+    color: #ccc;
+    z-index: 1;
+}
+
+.emptyStar {
+    color: #ccc;
+}
