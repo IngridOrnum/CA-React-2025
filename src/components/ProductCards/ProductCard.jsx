@@ -5,17 +5,17 @@ import {Link} from "react-router-dom";
 export function ProductCard ({product}) {
     return (
         <>
-            <div key={product.id} className={"border border-black w-fit p-4"}>
-                <img className={"w-60 h-60 object-cover"} src={product.image.url}
+            <div key={product.id} className={"w-fit p-4 flex flex-col gap-2"}>
+                <img className={"w-60 h-72 object-cover"} src={product.image.url}
                      alt={product.image.alt}/>
                 <p className={"font-bold"}>{product.title}</p>
-                <PriceDisplay price={product.price} discountPrice={product.discountedPrice} />
-                <div className={"flex gap-4"}>
+                <PriceDisplay discountPrice={product.discountedPrice} price={product.price} />
+                <div className={"flex gap-2 items-center"}>
                     <StarRating rating={product.rating}/>
-                    <p>{product.rating}</p>
+                    <p>({product.reviews.length})</p>
                 </div>
                 <Link to={`/single-product/${product.id}`}>
-                    <button className={"cursor-pointer border border-black p-1"}>View Product</button>
+                    <button className={"rounded-full cursor-pointer border border-black px-3 py-1 hover:text-white hover:bg-blue-800 "}>View Product</button>
                 </Link>
             </div>
         </>
