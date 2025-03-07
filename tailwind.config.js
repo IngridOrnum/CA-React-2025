@@ -5,7 +5,8 @@ module.exports = {
             colors: {
                 'custom-black': '#262626',
 
-            }
+            },
+
         }
     }
 };
