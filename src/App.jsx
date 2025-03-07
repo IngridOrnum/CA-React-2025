@@ -15,7 +15,7 @@ export function App() {
             const data = await res.json();
             console.log(data);
             setProducts(data.data);
-            const specificProduct = data.data.find(product => product.id === '5aa2e388-8dfb-4d70-b031-3732d8c6771a');
+            const specificProduct = data.data.find(product => product.id === '9be4812e-16b2-44e6-bc55-b3aef9db2b82');
             setHeroProduct(specificProduct);
         }
         getProducts();

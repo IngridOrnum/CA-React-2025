@@ -4,22 +4,23 @@ const PriceDisplay = ({ price, discountPrice}) => {
     const priceStyle = {
         textDecoration: discountPrice < price ? 'line-through' : 'none',
         marginRight: '10px',
-        color: 'black'
+        color: '#262626'
     };
 
     const discountedPriceStyle = {
-        color: 'red'
+        color: 'blue',
+        fontWeight: 'bold'
     };
 
     return (
         <div>
             {discountPrice < price ? (
-             <>
-                 <span style={priceStyle}>{price}</span>
-                 <span style={discountedPriceStyle}>{discountPrice}</span>
-             </>
+             <div className={"flex gap-4"}>
+                 <span style={discountedPriceStyle}>${discountPrice}</span>
+                 <span style={priceStyle}>${price}</span>
+             </div>
             ) : (
-                <span style={priceStyle}>{price}</span>
+                <span style={priceStyle}>${price}</span>
             )}
 
         </div>
