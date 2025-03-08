@@ -39,7 +39,7 @@ export function Search() {
                  onClick={() => setIsVisible(!isVisible)}
             />
             {isVisible &&
-                <div className={"bg-amber-200 min-h-screen absolute right-0 top-14 p-4"}>
+                <div className={"bg-amber-200 min-h-screen absolute -right-6 top-14 p-4"}>
                     <button className={"font-bold text-lg cursor-pointer border p-2"}
                             onClick={() => setIsVisible(!isVisible)}>
                         X
@@ -63,7 +63,7 @@ export function Search() {
                             ))}
                         </div>
                     )}
-                    <button className={"border p-2 cursor-pointer"}>Show All Results</button>
+                    {/*<button className={"border p-2 cursor-pointer"}>Show All Results</button>*/}
                 </div>
             }
         </>

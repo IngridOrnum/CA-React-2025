@@ -13,7 +13,7 @@ export function Cart () {
                 <img className={"h-8 w-8 cursor-pointer"}
                      src="/assets/shopping-bag.png" alt={"Shopping Bag"}/>
                 <span
-                    className={"absolute text-white top-2/3 right-1/2 bg-red-500 text-sm h-5 w-5 rounded full flex justify-center items-center"}>
+                    className={"absolute text-white top-2/4 right-2/4 bg-custom-black text-sm h-6 w-6 p-2 rounded-full flex justify-center items-center"}>
                     {cartItemCount}
                     </span>
             </Link>

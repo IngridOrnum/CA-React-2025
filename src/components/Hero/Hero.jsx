@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export function Hero({product}) {
     return (
-        <div className={"flex items-center justify-center h-[90vh] bg-gradient-to-b from-[#E6E9F1] to-[#D5C4D4]"}>
+        <div className={"flex items-center justify-center h-[92vh] bg-gradient-to-b from-[#E6E9F1] to-[#D5C4D4]"}>
             <div className={"w-1/2 h-full overflow-hidden"}>
                 <img src={product.image.url} alt={product.title}
                      className={"w-full h-full object-cover"}/>
@@ -16,14 +16,14 @@ export function Hero({product}) {
                     </div>
                     <h1 className={"font-title-bold text-custom-pink text-5xl italic"}>{product.title}</h1>
                 </div>
-                <div className={"flex flex-col gap-4"}>
-                    <div className={"flex flex-col items-center font-title-light text-custom-pink text-xl"}>
+                <div className={"flex flex-col gap-4 items-center"}>
+                    <div className={"flex items-center gap-2 font-title-light text-custom-pink text-xl"}>
                         <p>Was:</p>
-                        <p>$ {product.price}</p>
+                        <p>${product.price}</p>
                     </div>
-                    <div className={"flex flex-col items-center font-title-bold text-custom-pink text-3xl"}>
+                    <div className={"flex items-center gap-3 font-title-bold text-custom-pink text-3xl"}>
                         <p>Now:</p>
-                        <p>$ {product.discountedPrice}</p>
+                        <p>${product.discountedPrice}</p>
                     </div>
                 </div>
 
