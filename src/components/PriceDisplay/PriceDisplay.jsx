@@ -8,7 +8,7 @@ const PriceDisplay = ({ price, discountPrice}) => {
     };
 
     const discountedPriceStyle = {
-        color: 'blue',
+        color: '#262626',
         fontWeight: 'bold'
     };
 
