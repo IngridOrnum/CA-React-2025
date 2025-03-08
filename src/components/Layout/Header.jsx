@@ -7,8 +7,8 @@ export function Header() {
     return (
         <>
             <header className={"flex justify-between p-4 items-center"}>
-                <div className={"flex w-full justify-between"}>
-                    <nav className={"flex gap-4"}>
+                <div className={"flex w-full justify-between items-center"}>
+                    <nav className={"flex gap-4 font-custom-text"}>
                         {/*<span>Beauty</span>*/}
                         {/*<span>Fashion</span>*/}
                         {/*<span>Accessories</span>*/}
@@ -17,7 +17,7 @@ export function Header() {
                         <Link to={"/contact"}>Contact</Link>
                     </nav>
 
-                <Link className={"font-bold text-lg"} to={"/"}>Lux Shop</Link>
+                <Link className={"font-logo text-xl uppercase tracking-widest"} to={"/"}>lux shop</Link>
                 <div className={"flex items-center gap-6 relative"}>
                     <Search/>
                     <Cart/>

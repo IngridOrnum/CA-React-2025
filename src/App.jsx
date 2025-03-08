@@ -24,7 +24,7 @@ export function App() {
     return (
         <>
             {heroProduct && <Hero key={heroProduct.id} product={heroProduct}/>}
-            <h2 className={"font-bold text-2xl flex justify-center mb-10"}>Products</h2>
+            <h2 className={"font-bold text-2xl flex justify-center mb-10 text-custom-red font-title-bold"}>Products</h2>
             <div className={"flex flex-wrap gap-4 justify-center"}>
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product}/>
