@@ -6,7 +6,7 @@ export function Header() {
 
     return (
         <>
-            <header className={"flex justify-between py-4 px-6 items-center"}>
+            <header className={"flex justify-between py-4 px-6 items-center sticky top-0 bg-white z-10"}>
                 <div className={"flex w-full justify-between items-center"}>
                     <nav className={"flex gap-6 text-xl font-title-bold font-light"}>
                         {/*<span>Beauty</span>*/}
