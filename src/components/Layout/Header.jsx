@@ -12,11 +12,9 @@ export function Header() {
             <header className={"flex justify-between py-4 px-6 items-center sticky top-0 bg-white z-10"}>
                 <div className={"flex w-full justify-between items-center"}>
                     <Navigation isOpen={isOpen} setIsOpen={setIsOpen}/>
-                    {/*<div className={"relative w-full items-center justify-center"}>*/}
                         <Link className={"font-logo text-xl uppercase tracking-widest absolute right-0 left-0 w-fit mx-auto"} to={"/"}>
                             lux shop
                         </Link>
-                    {/*</div>*/}
                     <div className={"flex items-center gap-6"}>
                         <Search/>
                         <Cart/>
