@@ -11,3 +11,5 @@ Currently, two official plugins are available:
 Icon Attributions:
 Cart icon : <a href="https://www.flaticon.com/free-icons/shopping-bag" title="shopping-bag icons">Shopping-bag icons created by Abiyoga Pratama - Flaticon</a>
 Search icon : <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu - Flaticon</a>
+Hamburger icon: <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by AriqStock - Flaticon</a>
+

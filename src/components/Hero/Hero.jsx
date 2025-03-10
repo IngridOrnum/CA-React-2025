@@ -29,8 +29,8 @@ export function Hero({product}) {
 
                 <Link to={`/single-product/${product.id}`}>
                     <button
-                        className={"border border-color-custom-pink rounded-full px-6 py-2 cursor-pointer font-title-bold text-custom-pink bg-white text-2xl hover:text-white hover:bg-custom-pink"}>Buy
-                        Now!
+                        className={"uppercase rounded-full px-6 py-2 cursor-pointer font-custom-text font-light text-white bg-custom-black text-xl hover:text-custom-black hover:bg-white"}>
+                        Buy Now
                     </button>
                 </Link>
             </div>
