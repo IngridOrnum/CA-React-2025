@@ -17,7 +17,7 @@ export function Footer() {
                         <Link to={"/"}>Home</Link>
                         <Link to={"/contact"}>Contact</Link>
                     </div>
-                    <p className={"font-title-bold font-light"}>{`© lux shop ${year}. All Rights Reserved.`}</p>
+                    <p className={"font-title-bold font-light"}>{`© ${year} lux shop | All Rights Reserved.`}</p>
                 </div>
             </footer>
         </>
