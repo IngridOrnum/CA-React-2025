@@ -1,11 +1,31 @@
-# React + Vite
+# CA Js Frameworks (React)
+CA Spring 2025, second year FED at Noroff. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+Lux Shop is a dynamic eCom store.
 
-Currently, two official plugins are available:
+## Table of contents:
+- [User Features](#user-features)
+- [Tech Used](#tech-used)
+- [Deployment and Project Links](#deployment-and-project-links)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## User Features
+
+
+## Tech Used
+* React:
+* Tailwind:
+* ChatGPT: Used for debugging and assistance during development.
+* Figma: For designing wireframes.
+* FlatIcons: For incorporating icons into the interface.
+* Google Fonts: Typography.
+
+## Challenges Faced
+
+## Deployment and Project Links
+* [Deployed site (deployed on Netlify)](https://lux-shop.netlify.app/)
+* [GitHub Repository](https://github.com/IngridOrnum/CA-React-2025)
+
 
 
 Icon Attributions:
