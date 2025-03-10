@@ -7,7 +7,7 @@ export function Layout() {
         <>
             <div className={"min-h-screen flex flex-col"}>
                 <Header/>
-                <main className={"grow"}>
+                <main className={"grow bg-[#F7F7F7]"}>
                     <Outlet/>
                 </main>
                 <Footer/>

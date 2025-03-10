@@ -1,28 +1,16 @@
 import React from "react";
 
 const PriceDisplay = ({ price, discountPrice}) => {
-    const priceStyle = {
-        textDecoration: discountPrice < price ? 'line-through' : 'none',
-        marginRight: '10px',
-        color: '#262626'
-    };
-
-    const discountedPriceStyle = {
-        color: 'blue',
-        fontWeight: 'bold'
-    };
-
     return (
         <div>
             {discountPrice < price ? (
-             <div className={"flex gap-4"}>
-                 <span style={discountedPriceStyle}>${discountPrice}</span>
-                 <span style={priceStyle}>${price}</span>
+             <div className={"flex gap-4 my-3"}>
+                 <span className={"font-custom-text font-medium text-custom-black"}>${discountPrice}</span>
+                 <span className={"font-custom-text font-light text-custom-gray line-through"} >${price}</span>
              </div>
             ) : (
-                <span style={priceStyle}>${price}</span>
+                <span className={"flex font-custom-tex font-medium text-custom-black my-3"}>${price}</span>
             )}
-
         </div>
     )
 }

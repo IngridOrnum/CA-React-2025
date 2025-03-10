@@ -24,11 +24,13 @@ export function App() {
     return (
         <>
             {heroProduct && <Hero key={heroProduct.id} product={heroProduct}/>}
-            <h2 className={"font-bold text-2xl flex justify-center mb-10"}>Products</h2>
-            <div className={"flex flex-wrap gap-4 justify-center"}>
-                {products.map((product) => (
-                    <ProductCard key={product.id} product={product}/>
+            <div className={"mt-20 mb-20"}>
+                <h2 className={"text-4xl flex justify-center mb-10 font-title-bold font-light"}>Lux Products</h2>
+                <div className={"flex flex-wrap gap-4 justify-center max-w-[900px] mx-auto"}>
+                    {products.map((product) => (
+                        <ProductCard key={product.id} product={product}/>
                     ))}
+                </div>
             </div>
         </>
     )
