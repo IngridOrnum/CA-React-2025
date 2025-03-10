@@ -25,11 +25,11 @@ export function SingleProduct() {
         getSingleProduct();
     }, [id]);
     return (
-        <>
+        <div className={"min-h-screen"}>
             {product ? (
-                <div className={"mb-10 md:flex md:m-6"}>
-                    <img className={"h-96 w-full object-cover mx-auto md:w-1/2 lg:h-[500px] lg:w-2/3 xl:lg:h-[600px]"} src={product.image.url} alt={product.image.url}/>
-                    <div className={"flex flex-col items-center m-4 gap-2 md:w-1/2 lg:w-1/3"}>
+                <div className={"mb-10 md:flex md:m-6 justify-center md:gap-10"}>
+                    <img className={"h-96 w-full object-cover mx-auto md:mx-0 md:w-1/2 lg:h-[500px] max-w-2/3 xl:h-[600px] max-w-[770px]"} src={product.image.url} alt={product.image.url}/>
+                    <div className={"flex flex-col items-center gap-2 md:w-1/2 lg:w-1/3 max-w-[510px] my-10 mx-5"}>
                         <h1 className={"font-title-bold text-3xl"}>{product.title}</h1>
                         <div className={"flex gap-1 items-center"}>
                             <StarRating rating={product.rating}/>
@@ -95,6 +95,6 @@ export function SingleProduct() {
                 <p>Loading...</p>
             )
             }
-        </>
+        </div>
     )
 }
